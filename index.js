@@ -97,7 +97,7 @@ async function run() {
 
     app.delete("/deleteEvent/:id", async (req, res) => {
       console.log(req.params.id);
-      const result = await servicesCollection.deleteOne({
+      const result = await cart_Collection.deleteOne({
         _id: ObjectId(req.params.id),
       });
       res.send(result);
