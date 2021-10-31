@@ -108,7 +108,7 @@ async function run() {
       const query = { _id: ObjectId(id) };
       const event = {
         $set: {
-          status: "Confirm",
+          status: "Approved",
         },
       };
       const result = await cart_Collection.updateOne(query, event);
